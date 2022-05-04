@@ -339,6 +339,10 @@ body {
     height: 100%;
 }
 
+.header-top .container a:hover {
+    text-decoration: underline;
+}
+
 .header-top-left {
     position: absolute;
     left: 0;
@@ -1560,6 +1564,10 @@ body {
     background-position: 0px -13px;
     vertical-align: 2px;
     margin-left: 25px;
+}
+
+.link-bt-active::after {
+    transform: rotate(180deg);
 }
 
 .link-list {

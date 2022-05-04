@@ -4,6 +4,7 @@ $(document).ready(function () {
     let link_bt = $('.link-bt');
     link_bt.click(function () {
         link_list.stop().slideToggle(300);
+        $(this).toggleClass('link-bt-active');
     });
     // 위로가기 기능
     let gotop = $('.gotop');
@@ -21,6 +22,16 @@ $(document).ready(function () {
         } else {
             gotop.removeClass('gotop-active');
         }
+    });
+
+    // 오늘의 상품 좋아요
+    let today_atag = $('.today-wrap .good a')
+    $.each(today_atag, function(index, item) {
+        let heart = $(this).find('.good-heart');
+        heart.click(function(e){
+            e.preventDefault();
+            $(this).toggleClass('good-heart-active');
+        })
     });
 });
 
